@@ -28,8 +28,8 @@ export class PersonalFeedComponent {
   checkBoxChecked: boolean = false;
 
   changeTab(tab: string) {
-    // Add loading class to the feed__results element
-    const feedResults = document.querySelector('.feed__results');
+    // Add loading class to the feed-results element
+    const feedResults = document.querySelector('.feed-results');
     if (feedResults) {
       feedResults.classList.add('loading');
     }
@@ -39,7 +39,7 @@ export class PersonalFeedComponent {
       // Set active tab after loading
       this.activeTab = tab;
 
-      // Remove loading class from the feed__results element after loading
+      // Remove loading class from the feed-results element after loading
       if (feedResults) {
         feedResults.classList.remove('loading');
       }

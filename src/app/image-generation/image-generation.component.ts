@@ -45,20 +45,20 @@ export class ImageGenerationComponent {
   }
 
   toggleSidebar() {
-    const wrapper = document.querySelector('.techwave_fn_wrapper');
+    const wrapper = document.querySelector('.techwave-fn-wrapper');
     if (wrapper) {
-      if (wrapper.classList.contains('fn__has_sidebar')) {
-        this.renderer.removeClass(wrapper, 'fn__has_sidebar');
+      if (wrapper.classList.contains('fn-has-sidebar')) {
+        this.renderer.removeClass(wrapper, 'fn-has-sidebar');
       } else {
-        this.renderer.addClass(wrapper, 'fn__has_sidebar');
+        this.renderer.addClass(wrapper, 'fn-has-sidebar');
       }
     }
   }
 
   // removeClassFromWrapper() {
-  //   const wrapper = document.querySelector('.techwave_fn_wrapper');
-  //   if (wrapper && wrapper.classList.contains('fn__has_sidebar')) {
-  //     this.renderer.removeClass(wrapper, 'fn__has_sidebar');
+  //   const wrapper = document.querySelector('.techwave-fn-wrapper');
+  //   if (wrapper && wrapper.classList.contains('fn-has-sidebar')) {
+  //     this.renderer.removeClass(wrapper, 'fn-has-sidebar');
   //   }
   // }
 }

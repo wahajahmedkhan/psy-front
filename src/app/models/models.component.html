@@ -1,17 +1,17 @@
-<div class="techwave_fn_models_page">
+<div class="techwave-fn-models-page">
 
-  <div class="fn__title_holder">
+  <div class="fn-title-holder">
     <div class="container">
       <h1 class="title">Finetuned Models</h1>
     </div>
   </div>
 
   <!-- Models -->
-  <div class="techwave_fn_models">
+  <div class="techwave-fn-models">
 
-    <div class="fn__tabs">
+    <div class="fn-tabs">
       <div class="container">
-        <div class="tab_in">
+        <div class="tab-in">
           <a (click)="changeTab('tab1')" [class.active]="activeTab === 'tab1'" href="#tab1">Main Models</a>
           <a (click)="changeTab('tab2')" [class.active]="activeTab === 'tab2'" href="#tab2">Community’s</a>
           <a (click)="changeTab('tab3')" [class.active]="activeTab === 'tab3'" href="#tab3">Bookmarks</a>
@@ -23,15 +23,15 @@
 
     <!-- models filter -->
     <div class="container">
-      <div class="models__filter">
-        <div class="filter__left">
-          <div class="filter__search">
+      <div class="models-filter">
+        <div class="filter-left">
+          <div class="filter-search">
             <input type="text" placeholder="Search gallery">
-            <a href="#" class="techwave_fn_button"><span>Search</span></a>
+            <a href="#" class="techwave-fn-button"><span>Search</span></a>
           </div>
         </div>
-        <div class="filter__right">
-          <div class="filter__category">
+        <div class="filter-right">
+          <div class="filter-category">
             <select>
               <option value="all" selected>All Categories</option>
               <option value="Buildings">Buildings</option>
@@ -44,12 +44,12 @@
               <option value="Textures">Textures</option>
             </select>
           </div>
-          <div class="filter__order">
-            <div class="fn__icon_options medium_size align_right">
-              <span class="fn__icon_button">
+          <div class="filter-order">
+            <div class="fn-icon-options medium-size align-right">
+              <span class="fn-icon-button">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                   id="Layer_1" x="0px" y="0px" viewBox="0 0 359.4 263.6" style="enable-background:new 0 0 359.4 263.6;"
-                  xml:space="preserve" class="fn__svg replaced-svg">
+                  xml:space="preserve" class="fn-svg replaced-svg">
                   <g>
                     <path
                       d="M179.9,0.1c51.5,0,103,0,154.6,0c14.5,0,25.2,10.7,24.9,24.6c-0.3,12.3-10.2,22.6-22.5,23.2c-1,0.1-2,0-3,0   C231,48,128.3,48,25.5,48C12.8,48,3.2,40.7,0.6,29.5C-2.8,14.5,8.1,0.4,23.4,0.1c10.4-0.2,20.7,0,31.1,0C96.3,0,138.1,0,179.9,0.1z   ">
@@ -63,7 +63,7 @@
                   </g>
                 </svg>
               </span>
-              <div class="fn__icon_popup">
+              <div class="fn-icon-popup">
                 <ul>
                   <li>
                     <a href="#">Newest</a>
@@ -87,21 +87,21 @@
 
     <div class="container">
       <!-- models content -->
-      <div class="models__content">
-        <div class="models__results" [class.loading]="loading">
-          <div class="fn__preloader" *ngIf="loading">
+      <div class="models-content">
+        <div class="models-results" [class.loading]="loading">
+          <div class="fn-preloader" *ngIf="loading">
             <div class="icon"></div>
             <div class="text">Loading</div>
           </div>
-          <div class="fn__tabs_content">
-            <div id="tab1" class="tab__item active">
-              <ul class="fn__model_items">
-                <li class="fn__model_item" *ngFor="let item of modelItems">
+          <div class="fn-tabs-content">
+            <div id="tab1" class="tab-item active">
+              <ul class="fn-model-items">
+                <li class="fn-model-item" *ngFor="let item of modelItems">
                   <div class="item">
-                    <a href="#" (click)="selectItem(item)" class="fn__bookmark" [class.has__bookmark]="item.bookmarked">
+                    <a href="#" (click)="selectItem(item)" class="fn-bookmark" [class.has-bookmark]="item.bookmarked">
                       <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="512.000000pt" height="512.000000pt"
                           viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"
-                          class="fn__svg hasbook replaced-svg">
+                          class="fn-svg hasbook replaced-svg">
 
                           <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
                               <path
@@ -111,7 +111,7 @@
                       </svg>
                       <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="512.000000pt" height="512.000000pt"
                           viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"
-                          class="fn__svg hasntbook replaced-svg">
+                          class="fn-svg hasntbook replaced-svg">
 
                           <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
                               <path
@@ -123,13 +123,13 @@
                     <div class="img">
                       <img [src]="item.imageUrl" alt="">
                     </div>
-                    <div class="item__info">
+                    <div class="item-info">
                       <h3 class="title">{{ item.title }}</h3>
                       <p class="desc">{{ item.description }}</p>
                     </div>
-                    <div class="item__author">
+                    <div class="item-author">
                       <img src="assets/img/user/user.jpg" alt="">
-                      <h3 class="author_name">{{ item.author }}</h3>
+                      <h3 class="author-name">{{ item.author }}</h3>
                     </div>
                   </div>
                 </li>
@@ -138,8 +138,8 @@
           </div>
 
         </div>
-        <div class="models__more">
-          <a href="#" class="medium techwave_fn_button"><span>Load More</span></a>
+        <div class="models-more">
+          <a href="#" class="medium techwave-fn-button"><span>Load More</span></a>
         </div>
       </div>
       <!-- !models content -->

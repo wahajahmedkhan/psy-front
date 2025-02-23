@@ -200,24 +200,24 @@ input[type=button]{
     -o-transition:all .3s ease;
     transition:all .3s ease
 }
-[class^="fn__space__"]:after,
-[class^="fn__space__"]:before{
+[class^="fn-space-"]:after,
+[class^="fn-space-"]:before{
 	clear: both;
 	display: table;
 	content: '';
 }
-.fn__space__10{margin-bottom: 10px;}
-.fn__space__20{margin-bottom: 20px;}
-.fn__space__30{margin-bottom: 30px;}
-.fn__space__40{margin-bottom: 40px;}
-.fn__space__50{margin-bottom: 50px;}
-.fn__space__60{margin-bottom: 60px;}
-.fn__space__70{margin-bottom: 70px;}
-.fn__space__80{margin-bottom: 80px;}
-.fn__space__90{margin-bottom: 90px;}
-.fn__space__100{margin-bottom: 100px;}
-.fn__space__150{margin-bottom: 150px;}
-.fn__space__200{margin-bottom: 200px;}
+.fn-space-10{margin-bottom: 10px;}
+.fn-space-20{margin-bottom: 20px;}
+.fn-space-30{margin-bottom: 30px;}
+.fn-space-40{margin-bottom: 40px;}
+.fn-space-50{margin-bottom: 50px;}
+.fn-space-60{margin-bottom: 60px;}
+.fn-space-70{margin-bottom: 70px;}
+.fn-space-80{margin-bottom: 80px;}
+.fn-space-90{margin-bottom: 90px;}
+.fn-space-100{margin-bottom: 100px;}
+.fn-space-150{margin-bottom: 150px;}
+.fn-space-200{margin-bottom: 200px;}
 
 
 
