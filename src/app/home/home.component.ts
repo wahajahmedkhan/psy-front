@@ -7,7 +7,7 @@ import Typed from 'typed.js';
     selector: 'app-home',
     imports: [RouterLink],
     templateUrl: './home.component.html',
-    styleUrl: './home.component.css'
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     selector: 'app-faq',
     imports: [CommonModule],
     templateUrl: './faq.component.html',
-    styleUrl: './faq.component.css'
+    styleUrl: './faq.component.scss'
 })
 export class FaqComponent {
   isAccordionOpened = 0;

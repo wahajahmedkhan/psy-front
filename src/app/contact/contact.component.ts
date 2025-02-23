@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
     selector: 'app-contact',
     imports: [CommonModule, FormsModule],
     templateUrl: './contact.component.html',
-    styleUrl: './contact.component.css'
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   formData = {

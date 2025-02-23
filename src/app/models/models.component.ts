@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     selector: 'app-models',
     imports: [CommonModule],
     templateUrl: './models.component.html',
-    styleUrl: './models.component.css'
+    styleUrl: './models.component.scss'
 })
 export class ModelsComponent {
   activeTab: string = 'tab1';
@@ -30,7 +30,7 @@ export class ModelsComponent {
 
     setTimeout(() => {
       this.loading = false;
-    }, 1000); 
+    }, 1000);
   }
 
   selectItem(item: any) {

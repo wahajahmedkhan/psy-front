@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector: 'app-changelog',
     imports: [],
     templateUrl: './changelog.component.html',
-    styleUrl: './changelog.component.css'
+    styleUrl: './changelog.component.scss'
 })
 export class ChangelogComponent {
 

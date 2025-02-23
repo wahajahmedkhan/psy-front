@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
         FormsModule
     ],
     templateUrl: './personal-feed.component.html',
-    styleUrl: './personal-feed.component.css'
+    styleUrl: './personal-feed.component.scss'
 })
 export class PersonalFeedComponent {
 

@@ -8,7 +8,7 @@ import { filter } from 'rxjs';
     selector: 'app-leftsidebar',
     imports: [CommonModule, RouterLink],
     templateUrl: './leftsidebar.component.html',
-    styleUrl: './leftsidebar.component.css'
+    styleUrl: './leftsidebar.component.scss'
 })
 export class LeftsidebarComponent {
   isActive: string = 'home';

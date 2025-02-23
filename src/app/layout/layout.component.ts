@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
         CommonModule
     ],
     templateUrl: './layout.component.html',
-    styleUrl: './layout.component.css'
+    styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements OnInit{
   hasSidebar: boolean = false;

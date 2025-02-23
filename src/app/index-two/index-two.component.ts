@@ -7,7 +7,7 @@ import Typed from 'typed.js';
     selector: 'app-index-two',
     imports: [RouterLink],
     templateUrl: './index-two.component.html',
-    styleUrl: './index-two.component.css'
+    styleUrl: './index-two.component.scss'
 })
 export class IndexTwoComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}

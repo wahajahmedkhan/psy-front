@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector: 'app-documentation',
     imports: [],
     templateUrl: './documentation.component.html',
-    styleUrl: './documentation.component.css'
+    styleUrl: './documentation.component.scss'
 })
 export class DocumentationComponent {
 

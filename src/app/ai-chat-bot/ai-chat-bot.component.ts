@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     selector: 'app-ai-chat-bot',
     imports: [CommonModule],
     templateUrl: './ai-chat-bot.component.html',
-    styleUrl: './ai-chat-bot.component.css'
+    styleUrl: './ai-chat-bot.component.scss'
 })
 export class AiChatBotComponent {
   isFontOpened: boolean = false;

@@ -12,7 +12,7 @@ import { filter } from 'rxjs';
         RouterLink,
     ],
     templateUrl: './image-generation.component.html',
-    styleUrl: './image-generation.component.css'
+    styleUrl: './image-generation.component.scss'
 })
 export class ImageGenerationComponent {
   numberOfImages: number = 4;

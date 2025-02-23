@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     selector: 'app-community-feed',
     imports: [CommonModule],
     templateUrl: './community-feed.component.html',
-    styleUrl: './community-feed.component.css'
+    styleUrl: './community-feed.component.scss'
 })
 export class CommunityFeedComponent {
   trendingEnabled: boolean = true; // Initially set to true for the "Trending" link

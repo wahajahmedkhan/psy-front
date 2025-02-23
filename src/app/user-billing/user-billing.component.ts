@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
     selector: 'app-user-billing',
     imports: [RouterLink],
     templateUrl: './user-billing.component.html',
-    styleUrl: './user-billing.component.css'
+    styleUrl: './user-billing.component.scss'
 })
 export class UserBillingComponent {
 
