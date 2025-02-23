@@ -1,0 +1,460 @@
+<!-- Report -->
+<div class="techwave_fn_report">
+  <a href="#" class="fn__closer fn__icon_button">
+    <img src="assets/svg/close.svg" alt="" class="fn__svg">
+  </a>
+  <div class="report__closer"></div>
+  <div class="report__content">
+    <h3 class="title">Report Item</h3>
+    <h3 class="subtitle">What is the main reason for your report?</h3>
+    <input class="reason_field" type="text" placeholder="Type here...">
+    <div class="btns">
+      <a href="#" class="report techwave_fn_button">
+        <span>Report</span>
+      </a>
+      <a href="#" class="cancel techwave_fn_button">
+        <span>Cancel</span>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- !Report -->
+
+<!-- Image Lightbox -->
+<div class="techwave_fn_img_lightbox" [class.opened]="isLightboxOpened">
+
+  <!-- top section (of the image lightbox) -->
+  <div class="lightbox__top">
+    <div class="lightbox__tl">
+      <div class="lightbox__tlbar">
+        <div class="lightbox__tlbar_left">
+          <div class="item item__share fn__icon_options medium_size">
+            <a href="#" class="item__btn fn__icon_button">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                id="Layer_1" x="0px" y="0px" viewBox="0 0 319.7 351.4" style="enable-background:new 0 0 319.7 351.4;"
+                xml:space="preserve" class="fn__svg replaced-svg">
+                <g>
+                  <path
+                    d="M107.1,224.3c-7.3,3.9-14.3,8.6-22.1,11.4c-42.6,15.4-87.4-17.8-84.9-63c1.4-25.6,14.2-44.6,37.5-55.1   c23.5-10.5,46-7.2,66.4,8.6c2.1,1.7,3.4,1.5,5.4,0.1c26.8-18,53.7-35.9,80.6-53.7c2.2-1.5,2.3-3,2.2-5.3   c-2.3-33.3,22.9-63.2,55.4-67c33.3-3.8,66,18.5,71,54.4c4,28.8-11.6,56-37.9,67.3c-26.5,11.3-56.5,3.8-74.9-18.9   c-0.4-0.5-0.8-1-1.3-1.7c-1.1,0.7-2.1,1.3-3.1,1.9c-24.7,16.5-49.4,32.9-74.1,49.3c-2,1.4-2.8,2.4-1.9,5c3.8,11.8,3.7,23.8,0,35.7   c-0.5,1.8-1.1,3,1,4.4c25.9,17.1,51.7,34.4,77.6,51.5c0.1,0.1,0.2,0,0.6,0.1c1.4-1.7,2.8-3.5,4.5-5.2   c18.2-18.7,40.1-25.4,65.2-17.9c25,7.5,40.3,25,44.6,50.8c6.3,38.6-22.1,72.6-61.1,74.1c-36.9,1.4-67.9-30.4-65.3-67.3   c0.2-2.7-0.5-4.2-2.7-5.7c-26.5-17.5-53-35.2-79.4-52.8c-1.1-0.8-2.3-1.5-3.4-2.2C106.9,223.7,107,224,107.1,224.3z M64.2,143.7   c-17.5,0.1-31.9,14.4-32,31.9c0,17.4,14.4,32,31.8,32c17.7,0,32.1-14.4,32.1-32.1C96.2,158.2,81.6,143.6,64.2,143.7z M255.9,95.8   c17.7,0,31.9-14.2,32-31.8c0.1-17.5-14.3-32-31.8-32c-17.8,0-32.1,14.2-32.2,32C223.9,81.4,238.3,95.8,255.9,95.8z M255.8,255.6   c-17.6,0.1-31.9,14.3-31.9,31.9c0,17.5,14.4,31.9,31.9,31.9c17.7,0,32.1-14.4,32.1-32.1C287.9,269.8,273.4,255.6,255.8,255.6z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+            <div class="fn__icon_popup">
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">Pinterest</a></li>
+                <li><a href="#" class="fn__copy" data-copied="Copied!">Copy Link</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item item__download fn__icon_options medium_size">
+            <a href="#" class="item__btn fn__icon_button">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                id="Layer_1" x="0px" y="0px" viewBox="0 0 383.3 383.3" style="enable-background:new 0 0 383.3 383.3;"
+                xml:space="preserve" class="fn__svg replaced-svg">
+                <g>
+                  <path
+                    d="M20.3,383.3c-1.4-0.5-2.8-0.9-4.2-1.4c-10.8-3.8-17.5-15-15.8-25.9c1.9-11.6,11.3-20.1,22.8-20.5c1.5-0.1,3,0,4.5,0   c108.8,0,217.7,0,326.5,0c17.3,0,23.1,4,29.2,20.2c0,2.5,0,5,0,7.5c-0.8,2.3-1.5,4.7-2.5,6.9c-3.6,7.4-9.9,11.3-17.7,13.3   C248.8,383.3,134.5,383.3,20.3,383.3z">
+                  </path>
+                  <path
+                    d="M216.8,208.4c0.8-1.1,1.5-2.4,2.4-3.3c13.4-13.4,26.8-26.9,40.2-40.2c6.7-6.6,14.8-8.7,23.8-6.2   c8.9,2.5,14.6,8.6,16.6,17.6c2,9-0.7,16.7-7.2,23.2c-22.5,22.5-45,45-67.5,67.5c-5.2,5.2-10.4,10.4-15.6,15.6   c-10.7,10.6-24.9,10.7-35.6,0.1c-27.8-27.7-55.6-55.6-83.4-83.4c-6.8-6.8-9.3-15-6.7-24.3c2.5-8.9,8.6-14.6,17.6-16.6   c8.8-2,16.5,0.5,22.9,6.9c13.2,13.2,26.5,26.5,39.7,39.7c1,1,1.7,2.1,2.6,3.2c0.4-0.1,0.7-0.3,1.1-0.4c0-1.4,0-2.8,0-4.2   c0-59.5,0-119,0-178.5c0-14.6,10.6-25.3,24.5-25.1c12.5,0.2,22.8,10.3,23.4,22.8c0.1,3,0.1,6,0.1,9c0,57.3,0,114.5,0,171.8   c0,1.3,0,2.7,0,4C216,207.9,216.4,208.1,216.8,208.4z">
+                  </path>
+                </g>
+              </svg>
+            </a>
+            <div class="fn__icon_popup">
+              <ul>
+                <li><a href="#">Original Image</a></li>
+                <li><a href="#">Creative Upscaled Image</a></li>
+                <li><a href="#">HD Upscaled Image</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item item__more fn__icon_options medium_size">
+            <a href="#" class="item__btn fn__icon_button">
+              <span class="dots"></span>
+            </a>
+            <div class="fn__icon_popup">
+              <ul>
+                <li><a href="#">Remove Background</a></li>
+                <li><a href="#">Creative Upscale</a></li>
+                <li><a href="#">Alternative Upscale</a></li>
+                <li class="high_priorety"><a href="#" class="fn__report">Report Image</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="lightbox__tlbar_center">
+          <a href="#" class="img_nav nav_prev">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              id="Layer_1" x="0px" y="0px" viewBox="0 0 145.1 225.1" style="enable-background:new 0 0 145.1 225.1;"
+              xml:space="preserve" class="fn__svg replaced-svg">
+              <path
+                d="M104.4,112.2c-10.6-9.1-21-18-31.5-27C51.1,66.5,29.3,47.8,7.4,29.1c-4.6-3.9-7.2-8.6-6.5-14.7c0.7-6.2,4-10.7,9.8-13.1  c6-2.5,11.6-1.4,16.5,2.7c8.1,6.8,16.2,13.8,24.2,20.7c28.9,24.7,57.7,49.5,86.6,74.1c5.4,4.6,8.5,10.1,6.4,17.1  c-1,3.3-3.1,6.7-5.7,9C101.5,157.1,64,189,26.6,221c-7.1,6-17,5.2-22.8-1.7c-5.9-7.1-4.9-16.7,2.5-23c31.7-27.2,63.4-54.3,95.1-81.5  C102.4,114.1,103.2,113.3,104.4,112.2z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="img_nav nav_next">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              id="Layer_1" x="0px" y="0px" viewBox="0 0 145.1 225.1" style="enable-background:new 0 0 145.1 225.1;"
+              xml:space="preserve" class="fn__svg replaced-svg">
+              <path
+                d="M104.4,112.2c-10.6-9.1-21-18-31.5-27C51.1,66.5,29.3,47.8,7.4,29.1c-4.6-3.9-7.2-8.6-6.5-14.7c0.7-6.2,4-10.7,9.8-13.1  c6-2.5,11.6-1.4,16.5,2.7c8.1,6.8,16.2,13.8,24.2,20.7c28.9,24.7,57.7,49.5,86.6,74.1c5.4,4.6,8.5,10.1,6.4,17.1  c-1,3.3-3.1,6.7-5.7,9C101.5,157.1,64,189,26.6,221c-7.1,6-17,5.2-22.8-1.7c-5.9-7.1-4.9-16.7,2.5-23c31.7-27.2,63.4-54.3,95.1-81.5  C102.4,114.1,103.2,113.3,104.4,112.2z">
+              </path>
+            </svg>
+          </a>
+        </div>
+        <div class="lightbox__tlbar_right">
+          <a href="#" class="fn__like" data-id="2">
+            <span class="count">343</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              id="Layer_1" x="0px" y="0px" viewBox="0 0 409 346.2" style="enable-background:new 0 0 409 346.2;"
+              xml:space="preserve" class="fn__svg empty__like replaced-svg">
+              <g>
+                <path
+                  d="M409,126.1c-1.6,8.9-2.7,17.8-4.8,26.6c-4.3,18.3-12.8,34.9-23.3,50.4c-20.3,30.1-46.6,54.5-74.7,77   c-29.3,23.4-60.5,43.8-92.4,63.3c-6.1,3.7-12.3,3.8-18.4,0c-42.2-25.7-83.2-53.2-119.7-86.6C54,237,34.3,215.4,19.9,189.5   C-0.6,152.7-6.6,114.1,8.1,74C21.8,36.8,47.6,11.6,86.8,2.9c35.3-7.9,67.4,0.3,94.4,24.9c8.7,7.9,15.9,17.4,24,26.4   c1.6-2.2,3.6-5,5.7-7.8c9.5-12.7,20.7-23.5,34.4-31.6c18.6-11,38.7-15.6,60.3-14.3c23,1.4,43.5,9.3,61.2,24.1   c20.6,17.2,33.1,39.2,38.9,65.2c1.4,6.4,2.2,13,3.3,19.6C409,114.9,409,120.5,409,126.1z M376.8,123.9c1-28.3-8.5-53-25.6-70.5   c-24.9-25.3-67.6-28.4-95.8-7.1c-16.9,12.8-27.8,29.8-35.4,49.2c-3,7.6-8.8,12.1-15.7,12c-6.9-0.1-12.4-4.5-15.3-12   c-5.5-14.3-13.2-27.2-23.5-38.6c-20.9-23.3-54.2-31.3-83.1-19.5C56.9,47.9,42.1,67.7,35.3,93.9c-7.7,29.8-0.9,57.4,14.4,83.3   c13.8,23.4,32.4,42.7,52.6,60.7c30.8,27.4,64.9,50.4,99.7,72.2c1.8,1.2,3.1,1.2,5,0c27.5-17.2,54.5-35.2,79.9-55.5   c24.2-19.4,46.9-40.2,64.9-65.6C366.3,168.4,376.3,146.1,376.8,123.9z">
+                </path>
+              </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -28 512.00002 512"
+              class="fn__svg full__like replaced-svg">
+              <path
+                d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0">
+              </path><!-- Code injected by live-server -->
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="lightbox__tlimg">
+        <img src="assets/img/gallery/main.jpg" alt="">
+      </div>
+    </div>
+    <div class="lightbox__tr">
+      <div class="user__profile">
+        <a class="profile_link" routerLink="/user-profile">
+          <img src="assets/img/user/user.jpg" alt="">
+          <h2 class="user_name">LuckyLee</h2>
+        </a>
+        <a class="fn__follow" href="#" data-follow-text="Follow" data-unfollow-text="Unfollow">
+          <span class="text">Follow</span>
+        </a>
+        <a href="#" class="fn__closer fn__icon_button" (click)="closeLightbox()">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+            x="0px" y="0px" viewBox="0 0 383.3 383.3" style="enable-background:new 0 0 383.3 383.3;"
+            xml:space="preserve" class="fn__svg replaced-svg">
+            <g>
+              <path
+                d="M15,383.3c-1.1-0.5-2.2-1-3.3-1.4C0.2,377.1-3.6,362.9,4,353.1c1.1-1.5,2.5-2.8,3.8-4.1c51.3-51.3,102.7-102.7,154-154   c1-1,2.4-1.7,3.9-2.7c-1.8-1.9-2.8-3-3.8-4C110.1,136.6,58.5,84.9,6.8,33.3c-5.2-5.2-7.9-11.2-6.3-18.5C3.7,0.7,20.2-4.7,31.1,4.7   c1.2,1.1,2.3,2.2,3.5,3.4C85.7,59.3,136.9,110.4,188,161.6c1.1,1.1,2,2.3,3.2,3.8c1.4-1.3,2.5-2.3,3.5-3.3   C246.4,110.3,298.1,58.7,349.8,7c6-6,12.7-8.6,21-5.8c6.7,2.2,10.2,7.5,12.5,13.9c0,2.5,0,5,0,7.5c-1.8,5.6-5.6,9.8-9.7,13.8   C322.8,87,272.1,137.7,221.3,188.4c-1,1-2,2.1-3.4,3.5c1.4,1.2,2.6,2.1,3.7,3.2c50.5,50.5,101.1,101.1,151.7,151.6   c4.2,4.2,8.1,8.4,10,14.1c0,2.5,0,5,0,7.5c-2.4,7.6-7.4,12.6-15,15c-2.5,0-5,0-7.5,0c-5.6-1.8-9.7-5.7-13.8-9.7   c-50.7-50.8-101.4-101.5-152.1-152.2c-1-1-2.1-2-3.7-3.5c-1.2,1.5-2,2.8-3,3.8C137.5,272.2,86.9,322.9,36.3,373.5   c-4.1,4.1-8.2,7.9-13.8,9.7C20,383.3,17.5,383.3,15,383.3z">
+              </path>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div class="item__details">
+        <div class="fn__model">
+          <div class="model_img">
+            <img src="assets/img/user/user.jpg" alt="">
+          </div>
+          <div class="model_info">
+            <h4 class="model_subtitle">Model</h4>
+            <h3 class="model_title">ArtShaper v3</h3>
+          </div>
+          <a routerLink="/image_generation" class="fn__icon_button">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              id="Layer_1" x="0px" y="0px" viewBox="0 0 145.1 225.1" style="enable-background:new 0 0 145.1 225.1;"
+              xml:space="preserve" class="fn__svg replaced-svg">
+              <path
+                d="M104.4,112.2c-10.6-9.1-21-18-31.5-27C51.1,66.5,29.3,47.8,7.4,29.1c-4.6-3.9-7.2-8.6-6.5-14.7c0.7-6.2,4-10.7,9.8-13.1  c6-2.5,11.6-1.4,16.5,2.7c8.1,6.8,16.2,13.8,24.2,20.7c28.9,24.7,57.7,49.5,86.6,74.1c5.4,4.6,8.5,10.1,6.4,17.1  c-1,3.3-3.1,6.7-5.7,9C101.5,157.1,64,189,26.6,221c-7.1,6-17,5.2-22.8-1.7c-5.9-7.1-4.9-16.7,2.5-23c31.7-27.2,63.4-54.3,95.1-81.5  C102.4,114.1,103.2,113.3,104.4,112.2z">
+              </path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="fn__prompt_details">
+          <div class="prompt__header">
+            <div class="prompt__text">Prompt Details</div>
+            <div class="prompt__options">
+              <a href="#" class="fn__icon_button">
+                <span class="dots"></span>
+              </a>
+              <div class="prompt__popup">
+                <ul>
+                  <li><a href="#">Remix</a></li>
+                  <li><a href="#">Image to Image</a></li>
+                  <li><a href="#" class="fn__copy" data-copied="Copied!"
+                      data-text="Realistic painting, photorealistic masterpiece detailing, professional photography, natural lighting, volumetric lighting maximalist photoillustration: 8k resolution concept art intricately detailed, complex, elegant, expansive">Copy
+                      Prompt</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="prompt__content">
+            <p>Realistic painting, photorealistic masterpiece detailing, professional photography, natural lighting,
+              volumetric lighting maximalist photoillustration: 8k resolution concept art intricately detailed,
+              complex, elegant, expansive</p>
+          </div>
+        </div>
+
+        <div class="techwave_fn_accordion small" data-type="accordion">
+          <!-- data-type values: accordion, toggle -->
+          <div class="acc__item">
+            <div class="acc__header">
+              <h2 class="acc__title">Negative Prompt</h2>
+              <div class="acc__icon"></div>
+            </div>
+            <div class="acc__content">
+              <p>TECH-AI is an AI-powered content production suite that empowers creators with a powerful,
+                customisable, and user-friendly platform for bringing their ideas to life.</p>
+              <p>With a focus on granular control at every step of content creation, we put creators at the centre
+                of the creative process by offering granular control at every stage of generation, ensuring that AI
+                enhances, rather than replaces, human creative potential.</p>
+              <p>Our custom back-end delivers advancements in model fine tuning, prompt adherence, training and
+                inference speed, and multi-image prompting functionality. We also address common issues around image
+                degradation and have implemented a custom upscaling, with much more on the way!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="fn__details_list">
+        <ul>
+          <li>
+            <div class="sub_title">Created</div>
+            <div class="title">April 05, 2023</div>
+          </li>
+          <li>
+            <div class="sub_title">Resolution</div>
+            <div class="title">768 x 1024px</div>
+          </li>
+          <li>
+            <div class="sub_title">Sampler</div>
+            <div class="title">Tech-AI-Frenify</div>
+          </li>
+          <li>
+            <div class="sub_title">Step Count</div>
+            <div class="title">30</div>
+          </li>
+          <li>
+            <div class="sub_title">Base Model</div>
+            <div class="title">Frenify v2.0</div>
+          </li>
+          <li>
+            <div class="sub_title">High Contrast</div>
+            <div class="title">Off</div>
+          </li>
+          <li>
+            <div class="sub_title">Magic Prompt</div>
+            <div class="title">On</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!-- !top section (of the image lightbox) -->
+
+  <!-- related section (of the image lightbox) -->
+  <div class="lightbox__related">
+
+    <div class="fn__title_holder">
+      <h2 class="title">Related Images</h2>
+    </div>
+
+    <div class="fn__grid_items">
+      <ul>
+        <li>
+          <a href="#" data-id="1"><img src="assets/img/related/1.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="2"><img src="assets/img/related/2.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="3"><img src="assets/img/related/3.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="4"><img src="assets/img/related/4.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="5"><img src="assets/img/related/5.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="6"><img src="assets/img/related/6.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="7"><img src="assets/img/related/7.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="8"><img src="assets/img/related/8.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="9"><img src="assets/img/related/9.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="10"><img src="assets/img/related/10.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="11"><img src="assets/img/related/11.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href="#" data-id="12"><img src="assets/img/related/12.jpg" alt=""></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <!-- !related section (of the image lightbox) -->
+
+</div>
+<!-- !Image Lightbox -->
+
+<!-- Community Feed Page -->
+<div class="techwave_fn_community_page">
+
+  <div class="fn__title_holder">
+    <div class="container">
+      <h1 class="title">Community Feed</h1>
+    </div>
+  </div>
+
+  <!-- Feed -->
+  <div class="techwave_fn_feed">
+    <div class="container">
+
+      <!-- feed filter -->
+      <div class="feed__filter">
+        <div class="filter__left">
+          <div class="filter__search">
+            <input type="text" placeholder="Search gallery">
+            <a href="#" class="techwave_fn_button"><span>Search</span></a>
+          </div>
+          <div class="filter__upscaled">
+            <label class="fn__checkbox">
+              <input type="checkbox">Upscaled
+              <span class="checkmark"></span>
+              <img src="assets/svg/check.svg" alt="" class="fn__svg">
+            </label>
+          </div>
+        </div>
+        <div class="filter__sorting"> <a href="#" class="filter__trending techwave_fn_button has__icon small__border"
+            [class.enabled]="trendingEnabled" [class.disabled]="!trendingEnabled" (click)="toggleTrending()">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              id="Layer_1" x="0px" y="0px" viewBox="0 0 254.7 383.3" style="enable-background:new 0 0 254.7 383.3;"
+              xml:space="preserve" class="fn__svg replaced-svg">
+              <g>
+                <path
+                  d="M83.7,383.3c-8.1-4.1-9.8-7.8-7.6-16.6c12.1-48.7,24.2-97.4,36.3-146.1c0.3-1.2,0.5-2.4,0.9-4.1c-1.9,0-3.3,0-4.8,0   c-31.7,0-63.5-0.3-95.2,0.2c-9.4,0.1-16.2-7.2-12.1-17.8C26,135.8,50.3,72.6,74.8,9.4C77.7,2.1,80.7,0,88.7,0c33,0,66,0,99,0   c10.9,0,15.9,7.5,11.5,17.5c-13.9,31.5-27.8,62.9-41.7,94.4c-0.6,1.4-1.2,2.9-2,4.8c1.9,0,3.2,0,4.6,0c27.4,0,54.7,0,82.1,0   c6.1,0,10,2.5,11.8,7.3c1.6,4.3,0.2,8-2.1,11.6c-17.4,26.9-34.7,53.9-52,80.8c-34.1,53-68.2,105.9-102.2,158.9   c-2.2,3.5-4.8,6.3-8.6,7.9C87.2,383.3,85.5,383.3,83.7,383.3z M114.3,306.2c0.3,0.1,0.5,0.3,0.8,0.4   c35.8-55.6,71.6-111.2,107.7-167.4c-2.1,0-3.4,0-4.7,0c-25.7,0-51.5,0-77.2,0c-11.9,0-16.8-7.4-12-18.3   c12.8-29.1,25.7-58.1,38.5-87.2c1.6-3.6,3.1-7.2,4.8-11.1c-0.9-0.1-1.3-0.2-1.8-0.2c-24.6,0-49.2,0-73.9-0.1c-2.8,0-3.2,1.5-4,3.4   C72.1,78.6,51.7,131.4,31.2,184.3c-1.2,3.1-2.4,6.2-3.7,9.7c2,0,3.5,0,5,0c31.1,0,62.2,0,93.3,0c10.1,0,15,6.1,12.6,15.8   c-4.5,18.4-9.2,36.7-13.7,55.1C121.2,278.6,117.8,292.4,114.3,306.2z">
+                </path>
+              </g>
+              <!-- Code injected by live-server -->
+            </svg>
+            <span>Trending</span>
+          </a>
+          <a href="#" class="filter__new disabled techwave_fn_button has__icon small__border"
+            [class.enabled]="newEnabled" [class.disabled]="!newEnabled" (click)="toggleNew()">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              id="Layer_1" x="0px" y="0px" viewBox="0 0 319.3 319.9" style="enable-background:new 0 0 319.3 319.9;"
+              xml:space="preserve" class="fn__svg replaced-svg">
+              <g>
+                <path
+                  d="M260.2,41.1c8.7,0.4,13.7,3.4,16.4,9.3c2.8,6.1,2.2,12.2-2.4,17.1C262.6,79.9,250.7,92,238.7,104   c-6.2,6.1-16.6,5.5-22.6-0.7c-6-6.1-6.3-15.6-0.2-22c11.7-12.1,23.6-24.1,35.7-35.7C254.2,43,258.4,42,260.2,41.1z">
+                </path>
+                <path
+                  d="M42.1,261.7c0-4.5,1.7-8.3,4.8-11.4C58,239.2,69.1,228,80.3,216.9c6.7-6.7,16.5-6.7,22.8-0.3c6.3,6.3,6.3,16.1-0.3,22.8   c-11,11.2-22.2,22.3-33.3,33.4c-5.1,5.1-11.7,6.2-17.9,3.4C45.7,273.7,42.1,268.1,42.1,261.7z">
+                </path>
+                <path
+                  d="M42.7,61c0.5-8.5,3.3-13.7,9.5-16.5c6.1-2.8,12.2-2.2,17,2.5c11.7,11.3,23.1,22.8,34.3,34.5c6.2,6.5,5.6,16.2-0.7,22.2   c-6.2,5.9-15.5,6.1-21.9-0.1c-11.4-11.2-22.8-22.4-33.8-34C44.7,66.9,43.7,62.9,42.7,61z">
+                </path>
+                <path
+                  d="M143.7,39.8c0-7.7-0.1-15.5,0-23.2c0.1-9.8,6.8-16.6,16-16.5c9.1,0.1,15.7,6.8,15.7,16.4c0.1,15.6,0.1,31.2,0,46.9   c-0.1,9.8-6.8,16.6-16,16.5c-9-0.1-15.6-6.9-15.7-16.4C143.7,55.5,143.7,47.6,143.7,39.8z">
+                </path>
+                <path
+                  d="M39.8,175.9c-7.7,0-15.5,0.1-23.2,0c-9.8-0.1-16.6-6.8-16.6-16c0-9.2,6.9-15.8,16.7-15.8c15.5-0.1,30.9-0.1,46.4,0   c9.8,0.1,16.6,6.7,16.6,16c0,9.2-6.9,15.8-16.7,15.8C55.2,175.9,47.5,175.9,39.8,175.9z">
+                </path>
+                <path
+                  d="M279.6,175.8c-8.2,0-16.5,0.1-24.7,0c-7.8-0.2-14.3-6-15.2-13.5c-1-8.2,3.5-15.4,11.2-17.7c1.3-0.4,2.7-0.6,4-0.6   c16.3,0,32.7-0.1,49,0c7.8,0.1,14.2,6,15.2,13.4c1,8.3-3.7,15.8-11.5,17.7c-2.7,0.7-5.7,0.5-8.5,0.6   C292.6,175.9,286.1,175.9,279.6,175.8C279.6,175.9,279.6,175.9,279.6,175.8z">
+                </path>
+                <path
+                  d="M175.6,280.2c0,7.7,0.1,15.5,0,23.2c-0.1,9.7-6.9,16.6-16.1,16.5c-9-0.1-15.6-6.9-15.7-16.5c-0.1-15.6-0.1-31.2,0-46.9   c0.1-9.6,6.7-16.4,15.7-16.5c9.2-0.1,15.9,6.7,16.1,16.5c0,0.2,0,0.5,0,0.7C175.6,264.9,175.6,272.5,175.6,280.2z">
+                </path>
+                <path
+                  d="M263.2,277.7c-6.1,0-9.9-1.6-13.1-4.7c-11.3-11-22.6-21.9-33.7-33c-6.5-6.5-6.4-16.3-0.3-22.6c6.2-6.3,16-6.5,22.5-0.1   c11.5,11.3,22.9,22.7,34.1,34.2c4.9,5,5.8,11.2,3,17.7C273,275.4,267.9,277.6,263.2,277.7z">
+                </path>
+              </g>
+              <!-- Code injected by live-server -->
+            </svg>
+            <span>New</span>
+          </a>
+        </div>
+      </div>
+      <!-- !feed filter -->
+
+      <!-- feed content -->
+      <div class="feed__content">
+        <div class="feed__results">
+          <div class="fn__preloader">
+            <div class="icon"></div>
+            <div class="text">Loading</div>
+          </div>
+          <ul class="fn__gallery_items">
+            <li class="fn__gallery_item" *ngFor="let item of galleryItems">
+              <div class="item" [attr.data-id]="item.id" (click)="toggleLightbox()">
+                <div class="img">
+                  <img [src]="item.imageUrl" alt="">
+                </div>
+                <div class="fn__selectable_item">
+                  <span class="icon">
+                    <img src="assets/svg/check.svg" alt="" class="fn__svg">
+                  </span>
+                </div>
+                <div class="item__info">
+                  <div class="info__header">
+                    <div class="user__info">
+                      <img [src]="item.authorImageUrl" alt="">
+                      <h3 class="author_name">{{ item.authorName }}</h3>
+                    </div>
+                    <a [class.fn__like]="!isLiked" [class.has__like]="isLiked" [class.no_border]="!isLiked"
+                      [attr.data-id]="item.id" (click)="toggleLike()">
+                      <span class="count">{{ item.likeCount }}</span>
+                      <svg *ngIf="!isLiked" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px"
+                        viewBox="0 0 409 346.2" style="enable-background:new 0 0 409 346.2;" xml:space="preserve"
+                        class="fn__svg empty__like replaced-svg">
+                        <g>
+                          <path
+                            d="M409,126.1c-1.6,8.9-2.7,17.8-4.8,26.6c-4.3,18.3-12.8,34.9-23.3,50.4c-20.3,30.1-46.6,54.5-74.7,77   c-29.3,23.4-60.5,43.8-92.4,63.3c-6.1,3.7-12.3,3.8-18.4,0c-42.2-25.7-83.2-53.2-119.7-86.6C54,237,34.3,215.4,19.9,189.5   C-0.6,152.7-6.6,114.1,8.1,74C21.8,36.8,47.6,11.6,86.8,2.9c35.3-7.9,67.4,0.3,94.4,24.9c8.7,7.9,15.9,17.4,24,26.4   c1.6-2.2,3.6-5,5.7-7.8c9.5-12.7,20.7-23.5,34.4-31.6c18.6-11,38.7-15.6,60.3-14.3c23,1.4,43.5,9.3,61.2,24.1   c20.6,17.2,33.1,39.2,38.9,65.2c1.4,6.4,2.2,13,3.3,19.6C409,114.9,409,120.5,409,126.1z M376.8,123.9c1-28.3-8.5-53-25.6-70.5   c-24.9-25.3-67.6-28.4-95.8-7.1c-16.9,12.8-27.8,29.8-35.4,49.2c-3,7.6-8.8,12.1-15.7,12c-6.9-0.1-12.4-4.5-15.3-12   c-5.5-14.3-13.2-27.2-23.5-38.6c-20.9-23.3-54.2-31.3-83.1-19.5C56.9,47.9,42.1,67.7,35.3,93.9c-7.7,29.8-0.9,57.4,14.4,83.3   c13.8,23.4,32.4,42.7,52.6,60.7c30.8,27.4,64.9,50.4,99.7,72.2c1.8,1.2,3.1,1.2,5,0c27.5-17.2,54.5-35.2,79.9-55.5   c24.2-19.4,46.9-40.2,64.9-65.6C366.3,168.4,376.3,146.1,376.8,123.9z">
+                          </path>
+                        </g>
+                        <!-- Code injected by live-server -->
+                      </svg>
+
+                      <svg *ngIf="isLiked" xmlns="http://www.w3.org/2000/svg" viewBox="0 -28 512.00002 512"
+                        class="fn__svg full__like replaced-svg">
+                        <path
+                          d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0">
+                        </path>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="desc">{{ item.description }}</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="feed__more">
+          <a href="#" class="medium techwave_fn_button"><span>Load More</span></a>
+        </div>
+      </div>
+      <!-- !feed content -->
+
+    </div>
+  </div>
+  <!-- !Feed -->
+
+</div>
+<!-- !Community Feed Page -->

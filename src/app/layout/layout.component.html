@@ -1,0 +1,21 @@
+
+<div [ngClass]="{'techwave_fn_wrapper': true, 'fn__has_sidebar': hasSidebar}">
+  <div class="techwave_fn_wrap">
+
+    <app-navbar></app-navbar>
+
+    <app-leftsidebar></app-leftsidebar>
+
+    <div class="techwave_fn_content">
+
+      <div class="techwave_fn_page">
+
+        <router-outlet></router-outlet>
+
+      </div>
+
+      <app-footer></app-footer>
+    </div>
+
+  </div>
+</div>
