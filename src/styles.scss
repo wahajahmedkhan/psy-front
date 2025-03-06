@@ -1,6 +1,49 @@
-//@import "tailwindcss";
-//
-//
-//@import "assets/styles/tailwind.scss";
-//@import "assets/styles/base.scss";
-//@import "assets/styles/components.scss";
+// /* You can add global styles to this file, and also import other style files */
+
+// /* Basic styling for the application */
+// body {
+//   font-family: 'Work Sans', sans-serif;
+//   font-size: 16px;
+//   color: #4b5563;
+//   background-color: #f3f4f6;
+// }
+
+// h1 {
+//   font-size: 2.25rem;
+//   font-weight: 700;
+//   color: #111827;
+// }
+
+// h2 {
+//   font-size: 1.875rem;
+//   font-weight: 600;
+//   color: #1f2937;
+// }
+
+// p {
+//   font-size: 1rem;
+//   color: #4b5563;
+// }
+
+// /* Button styles */
+// .btn-primary {
+//   padding: 0.5rem 1.5rem;
+//   background-color: #2563eb;
+//   color: white;
+//   border-radius: 0.375rem;
+// }
+
+// .btn-primary:hover {
+//   background-color: #1d4ed8;
+// }
+
+// /* Card styles */
+// .card {
+//   padding: 1rem;
+//   background-color: white;
+//   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//   border-radius: 0.375rem;
+// }
+
+// @import 'assets/styles/base.scss';
+// @import 'assets/styles/components.scss';
