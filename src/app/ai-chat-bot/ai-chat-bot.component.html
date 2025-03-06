@@ -32,7 +32,12 @@
 
   <div class="chat-page">
 
-    <div class="font-trigger" (click)="toggleFontClass()">
+    <div class="font-trigger" 
+         (click)="toggleFontClass()"
+         (keydown.enter)="toggleFontClass()"
+         tabindex="0"
+         role="button"
+         aria-label="Toggle font options">
       <span></span>
     </div>
 
@@ -130,7 +135,11 @@
         <ul class="group-list">
           <li class="group-item">
             <div class="fn-chat-link" [class.active]="activeItem === 'chat1'"
-              (click)="toggleActive('chat1', 'Chat Bot Definition')">
+              (click)="toggleActive('chat1', 'Chat Bot Definition')"
+              (keydown.enter)="toggleActive('chat1', 'Chat Bot Definition')"
+              tabindex="0"
+              role="button"
+              aria-label="Select Chat Bot Definition chat">
               <span class="text">Chat Bot Definition</span>
               <input type="text" value="Chat Bot Definition">
               <span class="options">
@@ -154,7 +163,11 @@
           </li>
           <li class="group-item">
             <div class="fn-chat-link" [class.active]="activeItem === 'chat2'"
-              (click)="toggleActive('chat2', 'Essay: Marketing')">
+              (click)="toggleActive('chat2', 'Essay: Marketing')"
+              (keydown.enter)="toggleActive('chat2', 'Essay: Marketing')"
+              tabindex="0"
+              role="button"
+              aria-label="Select Essay: Marketing chat">
               <span class="text">Essay: Marketing</span>
               <input type="text" value="Essay: Marketing">
               <span class="options">
@@ -178,7 +191,11 @@
           </li>
           <li class="group-item">
             <div class="fn-chat-link" [class.active]="activeItem === 'chat3'"
-              (click)="toggleActive('chat3', 'Future of Social Media')">
+              (click)="toggleActive('chat3', 'Future of Social Media')"
+              (keydown.enter)="toggleActive('chat3', 'Future of Social Media')"
+              tabindex="0"
+              role="button"
+              aria-label="Select Future of Social Media chat">
               <span class="text">Future of Social Media</span>
               <input type="text" value="Future of Social Media">
               <span class="options">
@@ -202,7 +219,11 @@
           </li>
           <li class="group-item">
             <div class="fn-chat-link" [class.active]="activeItem === 'chat4'"
-              (click)="toggleActive('chat4', 'Business Ideas')">
+              (click)="toggleActive('chat4', 'Business Ideas')"
+              (keydown.enter)="toggleActive('chat4', 'Business Ideas')"
+              tabindex="0"
+              role="button"
+              aria-label="Select Business Ideas chat">
               <span class="text">Business Ideas</span>
               <input type="text" value="Business Ideas">
               <span class="options">
