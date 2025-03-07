@@ -3,30 +3,57 @@
 
 	<div class="sign-content">
 		<h1 class="logo">Designed by Frenify</h1>
-		<form class="signup">
+		<form class="signup" (ngSubmit)="onSubmit()" #signupForm="ngForm">
 			<div class="form-content">
 				<div class="form-title">Sign Up</div>
-				<div class="form-name">
-					<label for="name">Name</label>
-					<input type="text" class="input" id="name" placeholder="Full Name">
+				
+				<!-- Success message -->
+				<div class="form-message success" *ngIf="successMessage">
+					<p>{{ successMessage }}</p>
 				</div>
-				<div class="form-username">
-					<label for="username">Username</label>
-					<input type="text" class="input" id="username" placeholder="Username">
+				
+				<!-- Error message -->
+				<div class="form-message error" *ngIf="errorMessage">
+					<p>{{ errorMessage }}</p>
 				</div>
+				
 				<div class="form-email">
-					<label for="email">Username</label>
-					<input type="text" class="input" id="email" placeholder="yourmail@example.com">
+					<label for="email">Email</label>
+					<input 
+						type="email" 
+						class="input" 
+						id="email" 
+						name="email"
+						[(ngModel)]="userData.email"
+						placeholder="yourmail@example.com" 
+						required>
 				</div>
+				
 				<div class="form-pass">
 					<label for="user-password">Password</label>
-					<input type="password" id="user-password" autocomplete="current-password" spellcheck="false">
+					<input 
+						type="password" 
+						id="user-password" 
+						name="password"
+						[(ngModel)]="userData.password"
+						autocomplete="new-password" 
+						spellcheck="false"
+						required>
 				</div>
+				
 				<div class="form-submit">
 					<label class="fn-submit">
-						<input type="submit" name="submit" value="Create Account">
+						<input 
+							type="submit" 
+							name="submit" 
+							value="Create Account" 
+							[disabled]="isLoading || !signupForm.form.valid">
 					</label>
+					<div class="loading-indicator" *ngIf="isLoading">
+						<span>Processing...</span>
+					</div>
 				</div>
+				
 				<div class="form-alternative">
 					<div class="fn-lined-text">
 						<div class="line"></div>
@@ -38,7 +65,7 @@
 			</div>
 		</form>
 		<div class="sign-desc">
-			<p>Don't have an account? <a routerLink="/sign-in">Sign In</a></p>
+			<p>Already have an account? <a routerLink="/sign-in">Sign In</a></p>
 		</div>
 	</div>
 

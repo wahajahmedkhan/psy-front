@@ -3,24 +3,58 @@
 
 	<div class="sign-content">
 		<h1 class="logo">Designed by Frenify</h1>
-		<form class="login">
+		<form class="login" (ngSubmit)="onSubmit()" #loginForm="ngForm">
 			<div class="form-content">
 				<div class="form-title">Sign In</div>
+				
+				<!-- Success message -->
+				<div class="form-message success" *ngIf="successMessage">
+					<p>{{ successMessage }}</p>
+				</div>
+				
+				<!-- Error message -->
+				<div class="form-message error" *ngIf="errorMessage">
+					<p>{{ errorMessage }}</p>
+				</div>
+				
 				<div class="form-username">
-					<label for="user-login">Username or Email</label>
-					<input type="text" class="input" id="user-login" autocapitalize="off" autocomplete="username" aria-describedby="login-message">
+					<label for="user-login">Email</label>
+					<input 
+						type="email" 
+						class="input" 
+						id="user-login" 
+						name="email"
+						[(ngModel)]="userData.email"
+						autocapitalize="off" 
+						autocomplete="email" 
+						aria-describedby="login-message"
+						required>
 				</div>
 				<div class="form-pass">
 					<div class="pass-lab">
 						<label for="user-password">Password</label>
 						<a href="#">Forget Password?</a>
 					</div>
-					<input type="password" id="user-password" autocomplete="current-password" spellcheck="false">
+					<input 
+						type="password" 
+						id="user-password" 
+						name="password"
+						[(ngModel)]="userData.password"
+						autocomplete="current-password" 
+						spellcheck="false"
+						required>
 				</div>
 				<div class="form-submit">
 					<label class="fn-submit">
-						<input type="submit" name="submit" value="Sign In">
+						<input 
+							type="submit" 
+							name="submit" 
+							value="Sign In"
+							[disabled]="isLoading || !loginForm.form.valid">
 					</label>
+					<div class="loading-indicator" *ngIf="isLoading">
+						<span>Processing...</span>
+					</div>
 				</div>
 				<div class="form-alternative">
 					<div class="fn-lined-text">
