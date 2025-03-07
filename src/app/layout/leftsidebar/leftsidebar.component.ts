@@ -11,7 +11,7 @@ import { filter } from 'rxjs';
     styleUrl: './leftsidebar.component.scss'
 })
 export class LeftsidebarComponent {
-  isActive: string = 'home';
+  isActive = 'aichatbot';
   activeMenuItem: string;
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef , private router: Router) {
@@ -26,7 +26,7 @@ export class LeftsidebarComponent {
       this.renderer.addClass(htmlTag, 'panel-opened');
     }
   }
-  isSubMenuOpen: boolean = true;
+  isSubMenuOpen = true;
 
   toggleSubMenu() {
     this.isSubMenuOpen = !this.isSubMenuOpen;

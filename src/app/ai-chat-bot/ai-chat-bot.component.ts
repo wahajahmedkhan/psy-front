@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     styleUrl: './ai-chat-bot.component.scss'
 })
 export class AiChatBotComponent {
-  isFontOpened: boolean = false;
+  isFontOpened = false;
 
   toggleFontClass() {
     this.isFontOpened = !this.isFontOpened;
@@ -16,8 +16,8 @@ export class AiChatBotComponent {
   closeFont() {
     this.isFontOpened = false;
   }
-  activeItem: string  = 'chat1';
-  activeChatTitle: string = 'Chat Bot Definition';
+  activeItem = 'chat1';
+  activeChatTitle = 'Chat Bot Definition';
 
   toggleActive(item: string, chatTitle: string) {
     this.activeItem = item;
