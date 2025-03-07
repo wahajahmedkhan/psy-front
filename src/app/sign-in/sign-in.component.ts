@@ -39,9 +39,9 @@ export class SignInComponent {
                         localStorage.setItem('auth_token', response.token);
                     }
                     
-                    // Redirect to dashboard or home page after successful login
+                    // Redirect to AI chatbot page after successful login
                     setTimeout(() => {
-                        this.router.navigate(['/dashboard']);
+                        this.router.navigate(['/aichatbot']);
                     }, 1500);
                 },
                 error: (error) => {
