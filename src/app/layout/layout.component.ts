@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LeftsidebarComponent } from './leftsidebar/leftsidebar.component';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
+
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,14 +11,14 @@ import { CommonModule } from '@angular/common';
         NavbarComponent,
         LeftsidebarComponent,
         RouterOutlet,
-        FooterComponent,
+       
         CommonModule
     ],
     templateUrl: './layout.component.html',
     styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements OnInit{
-  hasSidebar: boolean = false;
+  hasSidebar = false;
 
   constructor(private router: Router) { }
 
