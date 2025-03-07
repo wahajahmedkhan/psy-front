@@ -23,6 +23,31 @@
   <!-- Styles -->
   <link type="text/css" rel="stylesheet" href="assets/css/plugins.css" />
   <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+  <!-- Custom navbar styles -->
+  <link type="text/css" rel="stylesheet" href="assets/css/navbar-custom.css" />
+  
+  <!-- Inline styles for chat sidebar -->
+  <style>
+    /* Make chat sidebar visible on right side */
+    .techwave-fn-aichatbot-page .chat-sidebar {
+      transform: translateX(0) !important;
+      z-index: 10 !important;
+    }
+    
+    /* Adjust chat page to make room for sidebar */
+    .techwave-fn-aichatbot-page .chat-page {
+      margin-right: 300px !important;
+      width: calc(100% - 300px) !important;
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 991px) {
+      .techwave-fn-aichatbot-page .chat-page {
+        margin-right: 0 !important;
+        width: 100% !important;
+      }
+    }
+  </style>
 
 </head>
 
