@@ -2,8 +2,9 @@
   <div class="rightpanel-content">
     <!-- #1 navigation group -->
     <div class="nav-group">
-      <h2 class="group-title">Start Here</h2>
-      <ul class="group-list">
+      <h2 class="group-title">Previous Chats</h2>
+      <p>Past conversations and queries</p>
+      <!-- <ul class="group-list">
         <li>
           <a routerLink="/ai-chat-bot" routerLinkActive="active"
             [ngClass]="{'fn-tooltip menu-item': activeMenuItem !== 'ai-chat-bot', 'fn-tooltip active menu-item': activeMenuItem === 'ai-chat-bot'}"
@@ -49,12 +50,12 @@
             <span class="text">Image Generation</span>
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
     <!-- !#1 navigation group -->
 
     <!-- #2 navigation group -->
-    <div class="nav-group">
+    <!-- <div class="nav-group">
       <h2 class="group-title">Resources</h2>
       <ul class="group-list">
         <li>
@@ -98,8 +99,76 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <!-- !#2 navigation group -->
+    <!-- Chat Sidebar Content -->
+    
+      <div class="sidebar-header">
+        <a href="javascript:void(0)" class="fn-new-chat-link" 
+          (click)="createNewChat()"
+          (keydown.enter)="createNewChat()"
+          (keydown.space)="createNewChat()"
+          tabindex="0"
+          [class.active]="activeMenuItem === 'ai-chat-bot'">
+          <span class="icon"></span>
+          <span class="text">New Chat</span>
+        </a>
+      </div>
+      <div class="sidebar-content">
+        <div class="chat-group new">
+          <h2 class="group-title">Today</h2>
+          <ul class="group-list">
+            <li class="group-item" *ngFor="let chat of chatItems">
+              <div class="fn-chat-link" 
+                [class.active]="chat.isActive"
+                [class.editing]="chat.isEditing"
+                (click)="selectChat(chat)"
+                (keydown)="handleKeyDown($event, chat)"
+                tabindex="0"
+                role="button"
+                [attr.aria-label]="'Select ' + chat.title + ' chat'">
+                <span class="text">{{ chat.title }}</span>
+                <input type="text" [value]="chat.title">
+                <span class="options">
+                  <button class="trigger" 
+                    (click)="toggleOptions($event)"
+                    (keydown.enter)="toggleOptions($event)"
+                    (keydown.space)="toggleOptions($event)">
+                    <span></span>
+                  </button>
+                  <span class="options-popup">
+                    <span class="options-list">
+                      <button class="edit" 
+                        (click)="editChat(chat, $event)"
+                        (keydown.enter)="editChat(chat, $event)"
+                        (keydown.space)="editChat(chat, $event)">Edit</button>
+                      <button class="delete" 
+                        (click)="deleteChat(chat, $event)"
+                        (keydown.enter)="deleteChat(chat, $event)"
+                        (keydown.space)="deleteChat(chat, $event)">Delete</button>
+                    </span>
+                  </span>
+                </span>
+                <span class="save-options">
+                  <button class="save" 
+                    (click)="saveChat(chat, $event)"
+                    (keydown.enter)="saveChat(chat, $event)"
+                    (keydown.space)="saveChat(chat, $event)">
+                    <img src="assets/svg/check.svg" alt="" class="fn-svg">
+                  </button>
+                  <button class="cancel" 
+                    (click)="cancelEdit(chat, $event)"
+                    (keydown.enter)="cancelEdit(chat, $event)"
+                    (keydown.space)="cancelEdit(chat, $event)">
+                    <img src="assets/svg/close.svg" alt="" class="fn-svg">
+                  </button>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <!-- End Chat Sidebar Content -->
   </div>
   <!-- !content (right panel) -->
 </div>

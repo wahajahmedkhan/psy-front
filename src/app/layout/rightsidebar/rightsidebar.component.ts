@@ -1,8 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Renderer2, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
+interface ChatItem {
+  id: number;
+  title: string;
+  isActive: boolean;
+  isEditing: boolean;
+}
 
 @Component({
   selector: 'app-rightsidebar',
@@ -15,27 +22,46 @@ import { filter } from 'rxjs';
   templateUrl: './rightsidebar.component.html',
   styleUrls: ['./rightsidebar.component.scss']
 })
-export class RightsidebarComponent {
+export class RightsidebarComponent implements OnInit {
   isActive = 'aichatbot';
-  activeMenuItem: string;
+  activeMenuItem = '';
+  chatItems: ChatItem[] = [
+    { id: 1, title: 'Chat Bot Definition', isActive: true, isEditing: false },
+    { id: 2, title: 'Essay: Marketing', isActive: false, isEditing: false },
+    { id: 3, title: 'Future of Social Media', isActive: false, isEditing: false },
+    { id: 4, title: 'Business Ideas', isActive: false, isEditing: false }
+  ];
+  currentChatTitle = '';
+  lastChatId = 4;
+  isSubMenuOpen = true;
 
-  constructor(private renderer: Renderer2, private elementRef: ElementRef, private router: Router) {
-    this.activeMenuItem = '';
+  constructor(private renderer: Renderer2, private elementRef: ElementRef, private router: Router) {}
+
+  ngOnInit(): void {
+    // Subscribe to router events to update active menu item
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        const url = event.urlAfterRedirects;
+        if (url.includes('ai-chat-bot')) {
+          this.activeMenuItem = 'ai-chat-bot';
+        } else {
+          this.activeMenuItem = '';
+        }
+      });
   }
 
   toggleClassOnHtmlTag() {
-    const htmlTag = this.elementRef.nativeElement.ownerDocument.documentElement;
-    
-    // Use the same toggle behavior for all screen sizes
-    if (htmlTag.classList.contains('right-panel-opened')) {
-      this.renderer.removeClass(htmlTag, 'right-panel-opened');
-    } else {
-      this.renderer.addClass(htmlTag, 'right-panel-opened');
+    const htmlElement = document.querySelector('html');
+    if (htmlElement) {
+      const isRightPanelOpen = htmlElement.classList.contains('right-panel-opened');
+      this.renderer.removeClass(htmlElement, 'right-panel-opened');
+      if (!isRightPanelOpen) {
+        this.renderer.addClass(htmlElement, 'right-panel-opened');
+      }
     }
   }
   
-  isSubMenuOpen = true;
-
   toggleSubMenu() {
     this.isSubMenuOpen = !this.isSubMenuOpen;
   }
@@ -43,63 +69,102 @@ export class RightsidebarComponent {
   toggleActive(link: string): void {
     this.isActive = link;
   }
-  
-  ngOnInit(): void {
-    this.router.events.pipe(
-      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      this.setActiveMenuItem(event.url);
-      
-      // Close sidebar on navigation
-      const htmlElement = document.documentElement;
-      this.renderer.removeClass(htmlElement, 'right-panel-opened');
-    });
+
+  // Chat functionality methods
+  createNewChat(): void {
+    this.lastChatId++;
+    const newChat: ChatItem = {
+      id: this.lastChatId,
+      title: 'New Chat',
+      isActive: false,
+      isEditing: false
+    };
+    
+    // Set all chats to inactive
+    this.chatItems.forEach(chat => chat.isActive = false);
+    
+    // Set new chat to active
+    newChat.isActive = true;
+    
+    // Add new chat to the beginning of the array
+    this.chatItems.unshift(newChat);
+    
+    // Navigate to chat bot with the new chat
+    this.router.navigate(['/ai-chat-bot']);
   }
 
-  setActiveMenuItem(url: string) {
-    switch (url) {
-      case '/':
-        this.activeMenuItem = '';
-        break;
-      case '/community_feed':
-        this.activeMenuItem = 'community_feed';
-        break;
-      case '/personal_feed':
-        this.activeMenuItem = 'personal_feed';
-        break;
-      case '/models':
-        this.activeMenuItem = 'models';
-        break;
-      case '/image_generation':
-        this.activeMenuItem = 'image_generation';
-        break;
-      case '/ai-chat-bot':
-        this.activeMenuItem = 'ai-chat-bot';
-        break;
-      case '/pricing':
-        this.activeMenuItem = 'pricing';
-        break;
-      case '/documentation':
-        this.activeMenuItem = 'documentation';
-        break;
-      case '/faq':
-        this.activeMenuItem = 'faq';
-        break;
-      case '/changelog':
-        this.activeMenuItem = 'changelog';
-        break;
-      case '/contact':
-        this.activeMenuItem = 'contact';
-        break;
-      case '/index-two':
-        this.activeMenuItem = 'index-two';
-        break;
-      case '/sign-in':
-        this.activeMenuItem = 'sign-in';
-        break;
-      default:
-        this.activeMenuItem = '';
-        break;
+  selectChat(chat: ChatItem): void {
+    // Set all chats to inactive
+    this.chatItems.forEach(item => item.isActive = false);
+    
+    // Set selected chat to active
+    chat.isActive = true;
+    
+    // Navigate to chat bot with the selected chat
+    this.router.navigate(['/ai-chat-bot']);
+  }
+
+  // Handle keyboard events for accessibility
+  handleKeyDown(event: KeyboardEvent, chat: ChatItem): void {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      this.selectChat(chat);
+    }
+  }
+
+  editChat(chat: ChatItem, event: Event): void {
+    event.stopPropagation();
+    chat.isEditing = true;
+    this.currentChatTitle = chat.title;
+  }
+
+  saveChat(chat: ChatItem, event: Event): void {
+    event.stopPropagation();
+    const inputElement = event.target as HTMLElement;
+    const chatElement = inputElement.closest('.fn-chat-link') as HTMLElement;
+    const inputField = chatElement.querySelector('input') as HTMLInputElement;
+    
+    if (inputField && inputField.value.trim() !== '') {
+      chat.title = inputField.value;
+    }
+    
+    chat.isEditing = false;
+  }
+
+  cancelEdit(chat: ChatItem, event: Event): void {
+    event.stopPropagation();
+    chat.isEditing = false;
+  }
+
+  deleteChat(chat: ChatItem, event: Event): void {
+    event.stopPropagation();
+    const index = this.chatItems.findIndex(item => item.id === chat.id);
+    
+    if (index !== -1) {
+      this.chatItems.splice(index, 1);
+      
+      // If we deleted the active chat, activate the first chat in the list
+      if (chat.isActive && this.chatItems.length > 0) {
+        this.chatItems[0].isActive = true;
+      }
+    }
+  }
+
+  toggleOptions(event: Event): void {
+    event.stopPropagation();
+    const target = event.target as HTMLElement;
+    const optionsPopup = target.closest('.options')?.querySelector('.options-popup') as HTMLElement;
+    
+    if (optionsPopup) {
+      // Close all other option popups first
+      document.querySelectorAll('.options-popup').forEach(popup => {
+        if (popup !== optionsPopup) {
+          (popup as HTMLElement).style.display = 'none';
+        }
+      });
+      
+      // Toggle current popup
+      optionsPopup.style.display = optionsPopup.style.display === 'block' ? 'none' : 'block';
     }
   }
 }
