@@ -3,6 +3,7 @@ import { RouterLink, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../services/auth.service';
 
 @Component({
     selector: 'app-sign-in',
@@ -20,24 +21,23 @@ export class SignInComponent {
     errorMessage = '';
     successMessage = '';
 
-    constructor(private http: HttpClient, private router: Router) {}
+    constructor(
+        private http: HttpClient, 
+        private router: Router,
+        private authService: AuthService
+    ) {}
 
     onSubmit() {
         this.isLoading = true;
         this.errorMessage = '';
         this.successMessage = '';
 
-        // Call the login API
-        this.http.post('http://135.181.181.121:3003/api/auth/login', this.userData)
+        // Use AuthService for login
+        this.authService.login(this.userData.email, this.userData.password)
             .subscribe({
                 next: (response: any) => {
                     this.isLoading = false;
                     this.successMessage = 'Login successful! Redirecting...';
-                    
-                    // Store the token in localStorage
-                    if (response && response.token) {
-                        localStorage.setItem('auth_token', response.token);
-                    }
                     
                     // Redirect to AI chatbot page after successful login
                     setTimeout(() => {
@@ -46,7 +46,9 @@ export class SignInComponent {
                 },
                 error: (error) => {
                     this.isLoading = false;
-                    if (error.error && error.error.message) {
+                    if (error.status === 0) {
+                        this.errorMessage = 'Cannot connect to the server. Please check your internet connection or the server might be down.';
+                    } else if (error.error && error.error.message) {
                         this.errorMessage = error.error.message;
                     } else {
                         this.errorMessage = 'Login failed. Please check your credentials and try again.';

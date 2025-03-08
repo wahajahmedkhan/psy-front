@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Renderer2 } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-navbar',
@@ -9,7 +10,7 @@ import { RouterLink } from '@angular/router';
         RouterLink
     ],
     templateUrl: './navbar.component.html',
-    styleUrl: './navbar.component.scss'
+    styleUrls: ['./navbar.component.scss'] // corrected styleUrl to styleUrls
 })
 export class NavbarComponent {
 
@@ -19,7 +20,7 @@ isDropdownOpened = false;
 isUserDropdownOpened = false;
 searchBarOpened = false;
 
-constructor(private renderer: Renderer2) {}
+constructor(private renderer: Renderer2, private authService: AuthService) {}
 
 toggleSkin() {
   const htmlElement = document.querySelector('html');
@@ -93,6 +94,10 @@ toggleSearchBar() {
 
 closeSearchBar() {
   this.searchBarOpened = false;
+}
+
+logout() {
+  this.authService.logout();
 }
 
 }
