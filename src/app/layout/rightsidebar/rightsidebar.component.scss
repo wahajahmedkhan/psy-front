@@ -1,0 +1,112 @@
+/* Right Sidebar Styles */
+.techwave-fn-rightpanel {
+  z-index: 101;
+  position: fixed;
+  background-color: var(--techwave-some-r-bg-color);
+  width: 350px; /* Wider sidebar */
+  top: var(--techwave-header-height); /* Position below navbar */
+  bottom: 0;
+  right: 0; /* Position on the right side */
+  overflow: hidden;
+  transition: all .5s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  transition: transform 0.3s ease;
+  
+  /* Scrollbar styling */
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+
+  /* Content area */
+  .rightpanel-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  /* Navigation groups */
+  .nav-group {
+    margin-bottom: 30px;
+
+    .group-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--techwave-heading-color);
+      padding-left: 10px;
+    }
+
+    .group-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 5px;
+
+        a {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          border-radius: 8px;
+          color: var(--techwave-paragraph-color);
+          transition: all 0.3s ease;
+          text-decoration: none;
+
+          &:hover, &.active {
+            background-color: var(--techwave-input-bg-color);
+            color: var(--techwave-heading-color);
+          }
+
+          .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .text {
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Make sure the right panel slides out consistently on all screen sizes */
+.right-panel-opened .techwave-fn-rightpanel {
+  transform: translateX(350px);
+}
+
+/* Ensure the sidebar is always visible on desktop */
+@media (min-width: 1041px) {
+  .techwave-fn-rightpanel {
+    width: 350px; /* Always visible */
+  }
+  
+  .techwave-fn-content {
+    margin-right: 350px; /* Adjust content margin for visible panel */
+  }
+}

@@ -1,20 +1,21 @@
-
-<div [ngClass]="{'techwave-fn-wrapper': true, 'fn-has-sidebar': hasSidebar}">
-  <div class="techwave-fn-wrap">
-
+<div class="techwave-fn-wrapper" [ngClass]="{'fn-has-rightsidebar': showRightSidebar}">
+    <!-- Header -->
     <app-navbar></app-navbar>
+    <!-- !Header -->
 
-    <app-leftsidebar></app-leftsidebar>
+    <!-- Left Panel -->
+    <app-leftsidebar *ngIf="showLeftSidebar"></app-leftsidebar>
+    <!-- !Left Panel -->
 
+    <!-- Right Panel -->
+    <app-rightsidebar *ngIf="showRightSidebar"></app-rightsidebar>
+    <!-- !Right Panel -->
+
+    <!-- Content -->
     <div class="techwave-fn-content">
-
-      <div class="techwave-fn-page">
-
-        <router-outlet></router-outlet>
-
-      </div>
-
+        <div class="techwave-fn-page">
+            <router-outlet></router-outlet>
+        </div>
     </div>
-
-  </div>
+    <!-- !Content -->
 </div>

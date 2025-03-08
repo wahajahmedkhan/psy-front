@@ -1,0 +1,29 @@
+/* Right sidebar toggle button styles */
+.bar-item-rightsidebar .item-opener {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  color: var(--techwave-heading-color);
+  transition: all .3s ease;
+}
+
+.bar-item-rightsidebar .item-opener:hover {
+  background-color: var(--techwave-input-bg-color);
+}
+
+/* Content margin adjustments for right sidebar */
+.fn-has-rightsidebar .techwave-fn-content {
+  margin-right: 350px;
+  width: calc(100% - 350px);
+  transition: all .5s ease;
+}
+
+@media (max-width: 1040px) {
+  .fn-has-rightsidebar .techwave-fn-content {
+    margin-right: 0;
+    width: 100%;
+  }
+}

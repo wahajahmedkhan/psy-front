@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
         RouterLink
     ],
     templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss'] // corrected styleUrl to styleUrls
+    styleUrls: ['./navbar.component.scss'] 
 })
 export class NavbarComponent {
 
@@ -19,8 +19,20 @@ isfullscreen = false;
 isDropdownOpened = false;
 isUserDropdownOpened = false;
 searchBarOpened = false;
+isMobile = false;
 
-constructor(private renderer: Renderer2, private authService: AuthService) {}
+constructor(private renderer: Renderer2, private authService: AuthService) {
+  this.checkScreenSize();
+}
+
+@HostListener('window:resize', ['$event'])
+onResize() {
+  this.checkScreenSize();
+}
+
+private checkScreenSize() {
+  this.isMobile = window.innerWidth <= 1040;
+}
 
 toggleSkin() {
   const htmlElement = document.querySelector('html');
@@ -31,6 +43,27 @@ toggleSkin() {
       } else {
           this.renderer.setAttribute(htmlElement, 'data-techwave-skin', 'light');
       }
+  }
+}
+
+toggleRightSidebar() {
+  const htmlElement = document.documentElement;
+  this.checkScreenSize(); // Ensure we have the latest screen size
+  
+  if (this.isMobile) {
+    // On mobile, toggle between hidden and visible
+    if (htmlElement.classList.contains('right-panel-opened')) {
+      this.renderer.removeClass(htmlElement, 'right-panel-opened');
+    } else {
+      this.renderer.addClass(htmlElement, 'right-panel-opened');
+    }
+  } else {
+    // On desktop, toggle between expanded and collapsed
+    if (htmlElement.classList.contains('right-panel-opened')) {
+      this.renderer.removeClass(htmlElement, 'right-panel-opened');
+    } else {
+      this.renderer.addClass(htmlElement, 'right-panel-opened');
+    }
   }
 }
 
@@ -72,7 +105,6 @@ toggleFullscreen() {
   this.notificationOpen = false;
   this.isUserDropdownOpened = false;
 }
-
 
 toggleDropdown() {
   this.isDropdownOpened = !this.isDropdownOpened;
