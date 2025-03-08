@@ -13,8 +13,8 @@ import { RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
 
-notificationOpen: boolean = false;
-isfullscreen: boolean = false;
+notificationOpen = false;
+isfullscreen = false;
 isDropdownOpened = false;
 isUserDropdownOpened = false;
 searchBarOpened = false;
